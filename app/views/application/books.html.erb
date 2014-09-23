@@ -1,0 +1,27 @@
+<h1>Books</h1>
+<div>
+  <%= link_to "Home", root_path %>
+</div>
+<table border="1">
+  <thead>
+    <tr>
+      <th>book id</th>
+      <th>title</th>
+      <th>author</th>
+      <th>author id</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% books.each do |book| %>
+    <tr>
+      <td><%= book.id %></td>
+      <td><%= book.name %></td>
+      <td><%= book.author.name %></td>
+      <td><%= book.author.id %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<div>
+  <p>Ordered by author name and book id</p>
+</div>

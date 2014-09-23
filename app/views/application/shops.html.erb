@@ -1,0 +1,9 @@
+<h1>Shops</h1>
+<div>
+  <%= link_to "Home", root_path %>
+</div>
+<ul>
+  <% shops.each do |shop| %>
+  <li><%= link_to shop.name, shopDetail_path(shop.id) %></li> 
+  <% end %>
+</ul>
